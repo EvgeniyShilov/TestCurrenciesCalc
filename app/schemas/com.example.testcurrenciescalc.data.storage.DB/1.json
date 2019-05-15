@@ -1,0 +1,58 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "c8c421eab79445d1309985ac35ecf5af",
+    "entities": [
+      {
+        "tableName": "Rate",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`currencyCode` TEXT NOT NULL, `unitValue` INTEGER NOT NULL, `medianRate` REAL NOT NULL, `buyingRate` REAL NOT NULL, `sellingRate` REAL NOT NULL, PRIMARY KEY(`currencyCode`))",
+        "fields": [
+          {
+            "fieldPath": "currencyCode",
+            "columnName": "currencyCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "unitValue",
+            "columnName": "unitValue",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "medianRate",
+            "columnName": "medianRate",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "buyingRate",
+            "columnName": "buyingRate",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sellingRate",
+            "columnName": "sellingRate",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "currencyCode"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"c8c421eab79445d1309985ac35ecf5af\")"
+    ]
+  }
+}

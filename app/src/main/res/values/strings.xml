@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TestCurrienciesCalc</string>
+    <string name="error_undefined">Some error occurred</string>
+    <string name="error_nan">NaN</string>
+    <string name="pattern_rate">%f for %d</string>
+    <string name="label_calc">Calc</string>
+    <string name="label_rates">Rates</string>
+</resources>
